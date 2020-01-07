@@ -11,3 +11,7 @@ get_directory() {
 }
 
 export PS1="\[\033[32m\]\$(get_directory)\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
+
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
